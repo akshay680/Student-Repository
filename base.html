@@ -1,0 +1,25 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <table border="1">
+            <!-- table header -->
+            {% if data %}
+            <tr>
+                {% for key in data[0] %}
+                <th> {{ key }} </th>
+                {% endfor %}
+            </tr>
+            {% endif %}
+
+            <!-- table rows -->
+            {% for dict_item in data %}
+            <tr>
+                {% for value in dict_item.values() %}
+                <td> {{ value }} </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            </table>
+    </body>
+</html>
